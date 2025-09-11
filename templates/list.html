@@ -7,6 +7,10 @@
     <div>title: {{movie.title | upper}}</div>
     <div>make: {{movie.year }}</div>
     <div>summary: {{movie.summary }}</div>
+    <div style="display: flex; gap:12px;">
+      <a href="{% url 'edit' movie.id %}">Edit</a>
+      <a href="{% url 'delete' movie.id %}">Delete</a>
+    </div>
   </div>
   {% endfor %}
 </div>
